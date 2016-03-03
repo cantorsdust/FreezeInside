@@ -1,0 +1,19 @@
+C:\Steam\SteamApps\common\Stardew Valley\xnb parse\Data\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Steam\SteamApps\common\Stardew Valley\xnb parse\Data\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Steam\SteamApps\common\Stardew Valley\xnb parse\Data\ClassLibrary1\ClassLibrary1\bin\Debug\Microsoft.Xna.Framework.dll
+C:\Steam\SteamApps\common\Stardew Valley\xnb parse\Data\ClassLibrary1\ClassLibrary1\bin\Debug\Stardew Valley.exe
+C:\Steam\SteamApps\common\Stardew Valley\xnb parse\Data\ClassLibrary1\ClassLibrary1\bin\Debug\StardewModdingAPI.exe
+C:\Steam\SteamApps\common\Stardew Valley\xnb parse\Data\ClassLibrary1\ClassLibrary1\bin\Debug\TrainerMod.dll
+C:\Steam\SteamApps\common\Stardew Valley\xnb parse\Data\ClassLibrary1\ClassLibrary1\bin\Debug\Microsoft.Xna.Framework.Game.dll
+C:\Steam\SteamApps\common\Stardew Valley\xnb parse\Data\ClassLibrary1\ClassLibrary1\bin\Debug\Microsoft.Xna.Framework.Graphics.dll
+C:\Steam\SteamApps\common\Stardew Valley\xnb parse\Data\ClassLibrary1\ClassLibrary1\bin\Debug\xTile.dll
+C:\Steam\SteamApps\common\Stardew Valley\xnb parse\Data\ClassLibrary1\ClassLibrary1\bin\Debug\Lidgren.Network.dll
+C:\Steam\SteamApps\common\Stardew Valley\xnb parse\Data\ClassLibrary1\ClassLibrary1\bin\Debug\Microsoft.Xna.Framework.Xact.dll
+C:\Steam\SteamApps\common\Stardew Valley\xnb parse\Data\ClassLibrary1\ClassLibrary1\bin\Debug\Steamworks.NET.dll
+C:\Steam\SteamApps\common\Stardew Valley\xnb parse\Data\ClassLibrary1\ClassLibrary1\bin\Debug\Microsoft.Xna.Framework.xml
+C:\Steam\SteamApps\common\Stardew Valley\xnb parse\Data\ClassLibrary1\ClassLibrary1\bin\Debug\Microsoft.Xna.Framework.Game.xml
+C:\Steam\SteamApps\common\Stardew Valley\xnb parse\Data\ClassLibrary1\ClassLibrary1\bin\Debug\Microsoft.Xna.Framework.Graphics.xml
+C:\Steam\SteamApps\common\Stardew Valley\xnb parse\Data\ClassLibrary1\ClassLibrary1\bin\Debug\Microsoft.Xna.Framework.Xact.xml
+C:\Steam\SteamApps\common\Stardew Valley\xnb parse\Data\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.csprojResolveAssemblyReference.cache
+C:\Steam\SteamApps\common\Stardew Valley\xnb parse\Data\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Steam\SteamApps\common\Stardew Valley\xnb parse\Data\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
