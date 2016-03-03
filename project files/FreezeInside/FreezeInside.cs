@@ -57,9 +57,10 @@ using StardewModdingAPI;
 
                 //Subscribe to an event from the modding API
                 //Events.KeyPressed += Events_KeyPressed;
-                Events.CurrentLocationChanged += Events_LocationChanged;
-                Events.DayOfMonthChanged += Events_DayChanged;
-                
+                //Events.CurrentLocationChanged += Events_LocationChanged;
+                //Events.DayOfMonthChanged += Events_DayChanged;
+
+                Events.TimeOfDayChanged += Events_TimeChanged;
             }
 
             //void Events_KeyPressed(Keys key)
@@ -75,19 +76,21 @@ using StardewModdingAPI;
                 //IEnumerable<System.Xml.Linq.XElement> FreezeTimeInMines =
                 
                 //var filepath = Environment.ExpandEnvironmentVariables("%AppData%\\\\StardewValley\\Mods\\FreezeInsideConfig.ini");
-                
+
+                string FilePathAppData = Environment.ExpandEnvironmentVariables("%AppData%\\StardewValley\\Mods\\FreezeInsideConfig.ini");
+                string FilePathSVMods = "Mods\\FreezeInsideConfig.ini";
 
                 try
                 {
                     System.IO.StreamReader reader;
                     try
                     {
-                        reader = System.IO.File.OpenText(Environment.ExpandEnvironmentVariables("%AppData%\\StardewValley\\Mods\\FreezeInsideConfig.ini"));
+                        reader = System.IO.File.OpenText(FilePathAppData);
                         Console.WriteLine("found INI in %appdata%");
                     }
                     catch
                     {
-                        reader = System.IO.File.OpenText("Mods\\FreezeInsideConfig.ini");
+                        reader = System.IO.File.OpenText(FilePathSVMods);
                         Console.WriteLine("found INI in Stardew Valley-Mods");
                     }
                     string line = reader.ReadLine();
@@ -99,7 +102,8 @@ using StardewModdingAPI;
                 catch
                 {
                     FreezeTimeInMines = false;
-                    Console.WriteLine("WARNING:  Could not find INI, defaulting FreezeTimeInMines to false");
+                    Console.WriteLine("WARNING:  Could not find INI, defaulting FreezeTimeInMines to false.  Writing new INI in %appdata%\\StardewValley\\Mods");
+                    System.IO.File.AppendAllLines(FilePathAppData, new[] { "FreezeTimeInMines=false" });
                 }
 
                 
@@ -115,6 +119,22 @@ using StardewModdingAPI;
                 
                 
             }
+
+
+            void Events_TimeChanged(Int32 time)
+            {
+                StardewValley.GameLocation location = StardewValley.Game1.currentLocation;
+                if ((location != null) && (!location.isOutdoors && (!((location is StardewValley.Locations.MineShaft) || (location is StardewValley.Locations.FarmCave)) || FreezeTimeInMines)))
+                {
+                    if (time != 600)
+                    {
+                        Command.CallCommand("world_settime " + (time - 10).ToString());
+                        //Console.WriteLine("world_settime " + (time - 10).ToString());
+                    }
+                }
+            }
+
+            /*
             void Events_LocationChanged(StardewValley.GameLocation location)
             {
                 if (!location.isOutdoors && (!((location is StardewValley.Locations.MineShaft) || (location is StardewValley.Locations.FarmCave)) || FreezeTimeInMines))
@@ -132,5 +152,6 @@ using StardewModdingAPI;
             {
                 Command.CallCommand("world_settime 600");
             }
+             */
         }
     }

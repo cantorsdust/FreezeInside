@@ -54,3 +54,4 @@ C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\project files\Fr
 C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\project files\FreezeInside\obj\Debug\FreezeInside.csprojResolveAssemblyReference.cache
 C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\project files\FreezeInside\obj\Debug\FreezeInside.dll
 C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\project files\FreezeInside\obj\Debug\FreezeInside.pdb
+C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\project files\FreezeInside\bin\Debug\TrainerMod.dll
