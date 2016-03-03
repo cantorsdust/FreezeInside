@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreezeInside", "ClassLibrary1\FreezeInside.csproj", "{175F328C-1390-46B0-B635-2D34E15ABA00}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreezeInside", "FreezeInside\FreezeInside.csproj", "{175F328C-1390-46B0-B635-2D34E15ABA00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
