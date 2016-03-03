@@ -73,22 +73,36 @@ using StardewModdingAPI;
 
                 //System.Xml.Linq.XElement settings = System.Xml.Linq.XElement.Load("FreezeInsideConfig.xml");
                 //IEnumerable<System.Xml.Linq.XElement> FreezeTimeInMines =
-                System.IO.StreamReader reader;
+                
                 //var filepath = Environment.ExpandEnvironmentVariables("%AppData%\\\\StardewValley\\Mods\\FreezeInsideConfig.ini");
-                try 
+                
+
+                try
                 {
-                    reader = System.IO.File.OpenText(Environment.ExpandEnvironmentVariables("%AppData%\\StardewValley\\Mods\\FreezeInsideConfig.ini"));
+                    System.IO.StreamReader reader;
+                    try
+                    {
+                        reader = System.IO.File.OpenText(Environment.ExpandEnvironmentVariables("%AppData%\\StardewValley\\Mods\\FreezeInsideConfig.ini"));
+                        Console.WriteLine("found INI in %appdata%");
+                    }
+                    catch
+                    {
+                        reader = System.IO.File.OpenText("FreezeInsideConfig.ini");
+                        Console.WriteLine("found INI in Stardew Valley-Mods");
+                    }
+                    string line = reader.ReadLine();
+                    char[] delimiterChars = { '=' };
+                    Console.WriteLine(line);
+                    string[] words = line.Split(delimiterChars);
+                    bool.TryParse(words[1], out FreezeTimeInMines);
                 }
                 catch
                 {
-                    reader = System.IO.File.OpenText("FreezeInsideConfig.ini"); 
+                    FreezeTimeInMines = false;
+                    Console.WriteLine("WARNING:  Could not find INI, defaulting FreezeTimeInMines to false");
                 }
+
                 
-                string line = reader.ReadLine();
-                char[] delimiterChars = { '=' };
-                Console.WriteLine(line);
-                string[] words = line.Split(delimiterChars);
-                bool.TryParse(words[1], out FreezeTimeInMines);
 
                 if (FreezeTimeInMines)
                 {
