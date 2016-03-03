@@ -41,7 +41,6 @@ C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\project files\Fr
 C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\project files\FreezeInside\bin\Debug\Microsoft.Xna.Framework.dll
 C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\project files\FreezeInside\bin\Debug\Stardew Valley.exe
 C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\project files\FreezeInside\bin\Debug\StardewModdingAPI.exe
-C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\project files\FreezeInside\bin\Debug\TrainerMod.dll
 C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\project files\FreezeInside\bin\Debug\Microsoft.Xna.Framework.Game.dll
 C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\project files\FreezeInside\bin\Debug\Microsoft.Xna.Framework.Graphics.dll
 C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\project files\FreezeInside\bin\Debug\xTile.dll

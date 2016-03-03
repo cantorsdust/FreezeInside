@@ -87,7 +87,7 @@ using StardewModdingAPI;
                     }
                     catch
                     {
-                        reader = System.IO.File.OpenText("FreezeInsideConfig.ini");
+                        reader = System.IO.File.OpenText("Mods\\FreezeInsideConfig.ini");
                         Console.WriteLine("found INI in Stardew Valley-Mods");
                     }
                     string line = reader.ReadLine();
