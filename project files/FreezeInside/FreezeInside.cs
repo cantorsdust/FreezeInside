@@ -36,6 +36,7 @@ using StardewModdingAPI;
             }
 
             public bool FreezeTimeInMines;
+            public int lasttime = 600;
             /*
             {
                 get
@@ -124,13 +125,29 @@ using StardewModdingAPI;
             void Events_TimeChanged(Int32 time)
             {
                 StardewValley.GameLocation location = StardewValley.Game1.currentLocation;
-                if ((location != null) && (!location.isOutdoors && (!((location is StardewValley.Locations.MineShaft) || (location is StardewValley.Locations.FarmCave)) || FreezeTimeInMines)))
-                {
+                if ((location != null) && (!location.isOutdoors && (!((location is StardewValley.Locations.MineShaft) || (location is StardewValley.Locations.FarmCave)) || FreezeTimeInMines)) && ((time - lasttime)==10))
+                /*
+                 * 3 conditions here:
+                 * Location exists, not null at beginning of game.  Required to avoid null pointer crash when next conditions are checked
+                 * Location is not outdoors
+                 * Location is either
+                 *      not a mineshaft or farmcave
+                 *      FreezeTimeInMines is true
+                 * time is not jumping by more than 10 mins (would imply change through a mod)
+                 */
+                {   
                     if (time != 600)
+                        //that is, if a new day didn't start
                     {
-                        Command.CallCommand("world_settime " + (time - 10).ToString());
-                        //Console.WriteLine("world_settime " + (time - 10).ToString());
+                        Command.CallCommand("world_settime " + lasttime.ToString());
+                        //we set the current time to the last time
                     }
+                    
+                }
+                else
+                {
+                    lasttime = time;
+                    //so if the above conditions are true, then time should be advancing with each tick, and we should update our lasttime
                 }
             }
 
