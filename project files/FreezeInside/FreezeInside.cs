@@ -27,7 +27,7 @@ using StardewModdingAPI;
 
             public override string Version
             {
-                get { return "1.0 v all inside"; }
+                get { return "1.3"; }
             }
 
             public override string Description
@@ -49,7 +49,7 @@ using StardewModdingAPI;
             }
              */
 
-            public override void Entry()
+            public override void Entry(params object[] objects)
             {
                 runConfig();
                 Console.WriteLine("FreezeInside Mod Has Loaded");
@@ -61,7 +61,7 @@ using StardewModdingAPI;
                 //Events.CurrentLocationChanged += Events_LocationChanged;
                 //Events.DayOfMonthChanged += Events_DayChanged;
 
-                Events.TimeOfDayChanged += Events_TimeChanged;
+                StardewModdingAPI.Events.TimeEvents.TimeOfDayChanged += Events_TimeChanged;
             }
 
             //void Events_KeyPressed(Keys key)
@@ -122,9 +122,10 @@ using StardewModdingAPI;
             }
 
 
-            void Events_TimeChanged(Int32 time)
+            void Events_TimeChanged(object sender, EventArgs e) 
             {
                 StardewValley.GameLocation location = StardewValley.Game1.currentLocation;
+                int time = StardewValley.Game1.timeOfDay;
                 if ((location != null) && (!location.isOutdoors && (!((location is StardewValley.Locations.MineShaft) || (location is StardewValley.Locations.FarmCave)) || FreezeTimeInMines)) && ((time - lasttime)==10))
                 /*
                  * 3 conditions here:
