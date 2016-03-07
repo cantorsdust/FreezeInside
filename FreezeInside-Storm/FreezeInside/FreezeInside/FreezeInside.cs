@@ -1,5 +1,5 @@
 ﻿/*
-    Copyright 2016 Zoey (Zoryn)
+    Copyright 2016 cantorsdust
 
     Storm is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -28,13 +28,12 @@ using Storm.StardewValley;
 using Storm.StardewValley.Event;
 using Storm.StardewValley.Wrapper;
 
-namespace MovementSpeedModifier
+namespace FreezeInside
 {
     [Mod(Author = "cantorsdust", Name = "FreezeInside", Version = 1.4)]
     public class FreezeInside : DiskResource
     {
         public int lasttime = 600;
-        public bool firsttick = true;
         public Config ModConfig { get; private set; }
 
         [Subscribe]
