@@ -59,9 +59,9 @@ namespace FreezeInside
 
             Console.WriteLine("FreezeInside Initialization Completed");
         }
-
-        [Subscribe]
-        public void PerformClockUpdateCallback(BeforeClockUpdateEvent @event)
+        
+        [Subscribe] 
+        public void BeforeClockUpdateCallback(BeforeClockUpdateEvent @event)
         {
             Console.WriteLine("Firing PerformClockUpdateCallback");
             var location = @event.Root.CurrentLocation;
@@ -109,6 +109,8 @@ namespace FreezeInside
                 Console.WriteLine("location requirements not met, time advancing normally");
             }
         }
+        
+        
     }
 
     public class Config
