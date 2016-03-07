@@ -61,7 +61,7 @@ namespace FreezeInside
         }
 
         [Subscribe]
-        public void PerformClockUpdateCallback(PerformClockUpdateEvent @event)
+        public void PerformClockUpdateCallback(BeforeClockUpdateEvent @event)
         {
             Console.WriteLine("Firing PerformClockUpdateCallback");
             var location = @event.Root.CurrentLocation;
