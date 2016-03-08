@@ -35,6 +35,9 @@ Please note that this game comes with a Config.json file with two options:
 CHANGELOG
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+v1.4.2
+Updated to reflect Newtonsoft library update in Storm.
+
 v1.4.1
 Updated to reflect change to BeforeClockUpdateEvent in Storm.
 

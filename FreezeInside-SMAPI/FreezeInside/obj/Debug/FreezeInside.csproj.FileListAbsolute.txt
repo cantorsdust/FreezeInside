@@ -54,3 +54,22 @@ C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\project files\Fr
 C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\project files\FreezeInside\obj\Debug\FreezeInside.csprojResolveAssemblyReference.cache
 C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\project files\FreezeInside\obj\Debug\FreezeInside.dll
 C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\project files\FreezeInside\obj\Debug\FreezeInside.pdb
+C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\FreezeInside-SMAPI\FreezeInside\bin\Debug\FreezeInside.dll
+C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\FreezeInside-SMAPI\FreezeInside\bin\Debug\FreezeInside.pdb
+C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\FreezeInside-SMAPI\FreezeInside\bin\Debug\Microsoft.Xna.Framework.dll
+C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\FreezeInside-SMAPI\FreezeInside\bin\Debug\Microsoft.Xna.Framework.Game.dll
+C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\FreezeInside-SMAPI\FreezeInside\bin\Debug\Stardew Valley.exe
+C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\FreezeInside-SMAPI\FreezeInside\bin\Debug\StardewModdingAPI.exe
+C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\FreezeInside-SMAPI\FreezeInside\bin\Debug\TrainerMod.dll
+C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\FreezeInside-SMAPI\FreezeInside\bin\Debug\Microsoft.Xna.Framework.Graphics.dll
+C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\FreezeInside-SMAPI\FreezeInside\bin\Debug\xTile.dll
+C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\FreezeInside-SMAPI\FreezeInside\bin\Debug\Lidgren.Network.dll
+C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\FreezeInside-SMAPI\FreezeInside\bin\Debug\Microsoft.Xna.Framework.Xact.dll
+C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\FreezeInside-SMAPI\FreezeInside\bin\Debug\Steamworks.NET.dll
+C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\FreezeInside-SMAPI\FreezeInside\bin\Debug\Microsoft.Xna.Framework.xml
+C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\FreezeInside-SMAPI\FreezeInside\bin\Debug\Microsoft.Xna.Framework.Game.xml
+C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\FreezeInside-SMAPI\FreezeInside\bin\Debug\Microsoft.Xna.Framework.Graphics.xml
+C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\FreezeInside-SMAPI\FreezeInside\bin\Debug\Microsoft.Xna.Framework.Xact.xml
+C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\FreezeInside-SMAPI\FreezeInside\obj\Debug\FreezeInside.csprojResolveAssemblyReference.cache
+C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\FreezeInside-SMAPI\FreezeInside\obj\Debug\FreezeInside.dll
+C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\FreezeInside-SMAPI\FreezeInside\obj\Debug\FreezeInside.pdb

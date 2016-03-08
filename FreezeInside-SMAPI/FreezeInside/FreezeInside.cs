@@ -27,7 +27,7 @@ using StardewModdingAPI;
 
             public override string Version
             {
-                get { return "1.3.1"; }
+                get { return "1.3.2"; }
             }
 
             public override string Description
@@ -62,6 +62,7 @@ using StardewModdingAPI;
                 //Events.DayOfMonthChanged += Events_DayChanged;
 
                 StardewModdingAPI.Events.TimeEvents.TimeOfDayChanged += Events_TimeChanged;
+                StardewModdingAPI.Events.TimeEvents.DayOfMonthChanged += Events_DayChanged;
             }
 
             //void Events_KeyPressed(Keys key)
@@ -120,7 +121,10 @@ using StardewModdingAPI;
                 
                 
             }
-
+            void Events_DayChanged(object sender, EventArgs e) 
+            {
+                lasttime = 600;
+            }
 
             void Events_TimeChanged(object sender, EventArgs e) 
             {
