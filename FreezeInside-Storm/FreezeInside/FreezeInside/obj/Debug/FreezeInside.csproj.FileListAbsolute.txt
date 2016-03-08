@@ -46,3 +46,5 @@ C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\FreezeInside-Sto
 C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\FreezeInside-Storm\FreezeInside\FreezeInside\obj\Debug\FreezeInside.dll
 C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\FreezeInside-Storm\FreezeInside\FreezeInside\obj\Debug\FreezeInside.pdb
 C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\FreezeInside-Storm\FreezeInside\FreezeInside\bin\Debug\Newtonsoft.Json.xml
+C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\FreezeInside-Storm\FreezeInside\FreezeInside\bin\Debug\StormLoader.pdb
+C:\Steam\SteamApps\common\Stardew Valley\mods made\FreezeInside\FreezeInside-Storm\FreezeInside\FreezeInside\bin\Debug\Castle.Core.xml

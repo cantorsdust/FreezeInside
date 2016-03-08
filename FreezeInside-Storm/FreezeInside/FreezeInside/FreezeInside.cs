@@ -30,7 +30,7 @@ using Storm.StardewValley.Wrapper;
 
 namespace FreezeInside
 {
-    [Mod(Author = "cantorsdust", Name = "FreezeInside", Version = 1.4)]
+    [Mod]
     public class FreezeInside : DiskResource
     {
         public int lasttime = 600;
@@ -39,7 +39,7 @@ namespace FreezeInside
         [Subscribe]
         public void InitializeCallback(InitializeEvent @event)
         {
-            var configLocation = Path.Combine(ParentPathOnDisk, "Config.json");
+            var configLocation = Path.Combine(PathOnDisk, "Config.json");
             if (!File.Exists(configLocation))
             {
                 Console.WriteLine("The config file for FreezeInside was not found, attempting creation...");
