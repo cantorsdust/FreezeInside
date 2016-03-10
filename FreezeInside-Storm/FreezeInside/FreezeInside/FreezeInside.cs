@@ -27,19 +27,23 @@ using Storm.ExternalEvent;
 using Storm.StardewValley;
 using Storm.StardewValley.Event;
 using Storm.StardewValley.Wrapper;
+using Storm;
 
 namespace FreezeInside
 {
     [Mod]
     public class FreezeInside : DiskResource
     {
+        public static ModConfig FreezeInsideConfig { get; private set; }
         public int lasttime = 600;
-        public Config ModConfig { get; private set; }
         public bool firsttick = true;
 
         [Subscribe]
         public void InitializeCallback(InitializeEvent @event)
         {
+            FreezeInsideConfig = new ModConfig();
+            FreezeInsideConfig = (ModConfig)Config.InitializeConfig(PathOnDisk + "\\Config.json", FreezeInsideConfig);
+            /*
             var configLocation = Path.Combine(PathOnDisk, "Config.json");
             if (!File.Exists(configLocation))
             {
@@ -58,6 +62,10 @@ namespace FreezeInside
                     ModConfig.FreezeTimeInMines, ModConfig.LetMachinesRunWhileTimeFrozen);
             }
 
+            Console.WriteLine("FreezeInside Initialization Completed");
+            */
+            Console.WriteLine("The config file for FreezeInside has been loaded. \n\tFreezeTimeInMines: {0}, LetMachinesRunWhileTimeFrozen: {1}",
+                    FreezeInsideConfig.FreezeTimeInMines, FreezeInsideConfig.LetMachinesRunWhileTimeFrozen);
             Console.WriteLine("FreezeInside Initialization Completed");
         }
 
@@ -79,7 +87,7 @@ namespace FreezeInside
             }
             int time = @event.Root.TimeOfDay;
             Console.WriteLine("time is " + time.ToString("G"));
-            if (location != null && !location.IsOutdoors && ((!location.Name.Equals("UndergroundMine") && !location.Name.Equals("FarmCave")) || ModConfig.FreezeTimeInMines) && (time - lasttime <= 10 || (time % 100 == 0 && time - lasttime == 50) || firsttick))
+            if (location != null && !location.IsOutdoors && ((!location.Name.Equals("UndergroundMine") && !location.Name.Equals("FarmCave")) || FreezeInsideConfig.FreezeTimeInMines) && (time - lasttime <= 10 || (time % 100 == 0 && time - lasttime == 50) || firsttick))
             {
                 //if location is not null
                 //if location is not outdoors
@@ -88,7 +96,7 @@ namespace FreezeInside
                 //first tick seems wonky, added bool
                 firsttick = false;
                 Console.WriteLine("location requirements met, resetting time");
-                if (ModConfig.LetMachinesRunWhileTimeFrozen)
+                if (FreezeInsideConfig.LetMachinesRunWhileTimeFrozen)
                 {
                     if (time == 600)
                     {
@@ -125,9 +133,17 @@ namespace FreezeInside
         
     }
 
-    public class Config
+    public class ModConfig : Config
     {
         public bool FreezeTimeInMines { get; set; }
         public bool LetMachinesRunWhileTimeFrozen { get; set; }
+
+        public override Config GenerateBaseConfig(Config baseConfig)
+        {
+            FreezeTimeInMines = false;
+            LetMachinesRunWhileTimeFrozen = true;
+
+            return this;
+        }
     }
 }
