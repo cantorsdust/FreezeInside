@@ -1,4 +1,4 @@
 {
-  "FreezeTimeInMines": true,
-  "LetMachinesRunWhileTimeFrozen": false
+  "FreezeTimeInMines": false,
+  "LetMachinesRunWhileTimeFrozen": true
 }
