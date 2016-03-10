@@ -60,7 +60,13 @@ namespace FreezeInside
 
             Console.WriteLine("FreezeInside Initialization Completed");
         }
-        
+
+        [Subscribe]
+        public void PostNewDayCallback(PostNewDayEvent @event)
+        {
+            lasttime = 600;
+        }
+
         [Subscribe] 
         public void Pre10MinuteClockUpdateCallback(Pre10MinuteClockUpdateEvent @event)
         {

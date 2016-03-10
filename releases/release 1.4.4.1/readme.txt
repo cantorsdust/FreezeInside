@@ -35,6 +35,9 @@ Please note that this game comes with a Config.json file with two options:
 CHANGELOG
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+v.1.4.4.1
+Fixed day reset time bug, again.
+
 v.1.4.4.0
 Updated for new Storm version.  Fixed festival time jump bug.
 
