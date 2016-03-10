@@ -35,6 +35,7 @@ namespace FreezeInside
     {
         public int lasttime = 600;
         public Config ModConfig { get; private set; }
+        public bool firsttick = true;
 
         [Subscribe]
         public void InitializeCallback(InitializeEvent @event)
@@ -61,9 +62,9 @@ namespace FreezeInside
         }
         
         [Subscribe] 
-        public void BeforeClockUpdateCallback(Before10MinuteClockUpdateEvent @event)
+        public void Pre10MinuteClockUpdateCallback(Pre10MinuteClockUpdateEvent @event)
         {
-            Console.WriteLine("Firing PerformClockUpdateCallback");
+            Console.WriteLine("Firing Pre10MinuteClockUpdateEvent");
             var location = @event.Root.CurrentLocation;
             if (location != null)
             {
@@ -72,9 +73,14 @@ namespace FreezeInside
             }
             int time = @event.Root.TimeOfDay;
             Console.WriteLine("time is " + time.ToString("G"));
-            if (location != null && !location.IsOutdoors && ((!location.Name.Equals("UndergroundMine") && !location.Name.Equals("FarmCave")) || ModConfig.FreezeTimeInMines))
+            if (location != null && !location.IsOutdoors && ((!location.Name.Equals("UndergroundMine") && !location.Name.Equals("FarmCave")) || ModConfig.FreezeTimeInMines) && (time - lasttime <= 10 || (time % 100 == 0 && time - lasttime == 50) || firsttick))
             {
-
+                //if location is not null
+                //if location is not outdoors
+                //if location name is not UndergroundMine or FarmCave or alternatively, if FreezeTimeInMines is true
+                //if time is not jumping by more than 10 minutes (some festivals do this and I don't want to break them)
+                //first tick seems wonky, added bool
+                firsttick = false;
                 Console.WriteLine("location requirements met, resetting time");
                 if (ModConfig.LetMachinesRunWhileTimeFrozen)
                 {

@@ -1,7 +1,7 @@
 ﻿{
     "displayName": "FreezeInside",
     "author": "cantorsdust",
-    "version": "1.4.3.1",
+    "version": "1.4.3.0",
     "description": "Goes in %appdata% StardewValley/Mods/FreezeInside with your dll.",
 
     "assemblyFileName": "FreezeInside.dll"
